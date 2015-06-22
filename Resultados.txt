@@ -1,0 +1,53 @@
+Se presenta un algoritmo para la resolucion del problema "Elevator Puzzle", despues de recibir el numero de paradas por ascensor y el numero de pisos en el edificio, se crearon los conjuntos necesarios para la prueba. Se consiguio que en vez de ir probando la existencia de una posible combinacion de elevadores desde 1 hasta N elevadores, probar N elevadores desde el principio daba un resultado mas rapido, esto se debe a que no tiene que hacer backtracking con una cantidad de elevadores que nunca van a dar resultado, ademas de esto por la misma forma de resolucion del problema, se usa el minimo numero de elevadores y los inecesarios solo quedan para el piso N y para el 1, ya que los demas pisos estan cubiertos.
+
+n : Numero de pisos del edificio.
+k : Numero de pisos que el elevador puede cubrir (obviando el piso 1 y el N).
+
+
+k=3; n=6; 
+
+M: 3
+1 6 4 3 2
+1 6 3 4 5
+1 6 5 2 1
+1 6 1 1 1
+1 6 1 1 1
+
+----------
+Finished in 167msec
+
+
+k=4; n=6; 
+M: 1
+1 6 5 3 4 2
+1 6 1 1 1 1  
+1 6 1 1 1 1
+1 6 1 1 1 1
+1 6 1 1 1 1
+1 6 1 1 1 1
+
+----------
+Finished in 156msec
+
+k=3; n=8;
+tiempo > 40m
+
+
+k=4; n=8; 
+M: 3
+1 8 2 3 7 4
+1 8 2 6 3 5
+1 8 7 4 5 6
+1 8 1 1 1 1
+1 8 1 1 1 1
+1 8 1 1 1 1
+
+----------
+
+Finished in 7m 56s
+
+
+
+
+k=5; n=8
+tiempo > 40min
