@@ -1,3 +1,64 @@
+Problema 1
+Se propone la ecuacion A/(B*C) + D/(E*F) + G/(H*I) = 1,
+donde cada letra represanta un digito positivo.
+
+el archivo 1.mzn simplemente se corre y se obtuvo como resultado:
+Compiling 1.mzn
+Running 1.mzn
+A = 1;
+B = 6;
+C = 3;
+D = 5;
+E = 9;
+F = 8;
+G = 7;
+H = 4;
+I = 2;
+----------
+Finished in 140msec
+
+Problema 2
+Se debe encontrar una solucion al juego (tipo sudoku) propuesto, donde
+se colocan en cada casilla un digito entre 1 y 7, de forma tal que no 
+exista digito repetido en alguna fila, columna o camino.
+
+El archivo 2.mzn necesita una matriz inicial como entrada, se utilizo:
+start=[| 0, 0, 2, 0, 4, 0, 0,| 0, 5, 0, 0, 0, 2, 0,| 0, 0, 0, 0, 0, 0, 6,| 0, 7, 0, 0, 0, 5, 0,| 0, 0, 0, 0, 0, 0, 7,| 0, 6, 0, 0, 0, 4, 0,| 0, 0, 1, 0, 2, 0, 0,|]
+
+la cual representa el estado inicial propuesto en el pdf, y obteniendo como
+resultado:
+
+Running 2.mzn
+6 1 2 3 4 7 5 
+1 5 6 4 7 2 3 
+7 2 4 1 5 3 6 
+4 7 3 6 1 5 2 
+3 4 5 2 6 1 7 
+2 6 7 5 3 4 1 
+5 3 1 7 2 6 4 
+
+----------
+Finished in 76msec
+
+Problema 3
+Se debe minimizar la resta de ABCDE - FGHIJ, siendo cada letra un digito
+entre el 0 y 9, y cada digito debe ser distinto.
+Se encontro esta solucion.
+
+Compiling 3.mzn
+Running 3.mzn
+A =5	 B =0
+C =1	 D =2
+E =3	 F =4
+G =9	 H =8
+I =6	 J =7
+ABCDE =50123	 FGHIJ =49876
+ABCDE - FGHIJ = 247
+----------
+==========
+Finished in 175msec
+(El archivo 3.mzn simplemente se corre).
+
 Se presenta un algoritmo para la resolucion del problema "Elevator Puzzle", despues de recibir el numero de paradas por ascensor y el numero de pisos en el edificio, se crearon los conjuntos necesarios para la prueba. Se consiguio que en vez de ir probando la existencia de una posible combinacion de elevadores desde 1 hasta N elevadores, probar N elevadores desde el principio daba un resultado mas rapido, esto se debe a que no tiene que hacer backtracking con una cantidad de elevadores que nunca van a dar resultado, ademas de esto por la misma forma de resolucion del problema, se usa el minimo numero de elevadores y los inecesarios solo quedan para el piso N y para el 1, ya que los demas pisos estan cubiertos.
 
 n : Numero de pisos del edificio.
@@ -51,3 +112,34 @@ Finished in 7m 56s
 
 k=5; n=8
 tiempo > 40min
+
+Problema 5
+Se propone el problema de recubrimiento (tiling) de pentominos en distintos tableros.
+
+Se propuso la representacion de cada pieza del pentomino y todas sus posibles posiciones variaciones dentro de una matriz como representacion de este problema.
+
+Por desgracia nuestro modelaje no llego a ningun resultado concreto despues de
+2 horas de corrida en cada caso, excepto el primero 2x30 donde las dimensiones
+no son las adecuadas para todas las piezas y el programa termina dando un error
+por pantalla, pero se logro verificar que con pocas piezas si se realizaba un recubrimiento completo de la matriz como por ejemplo:
+
+Utilizando las letras:
+L = 3
+X = 10
+U = 7
+P = 5
+F = 1
+
+en un tablero 5x5
+Compiling 5.mzn, additional arguments m=5; n=5; 
+Running 5.mzn
+ 7   7  10   3   3  
+ 7  10  10  10   3  
+ 7   7  10   1   3  
+ 5   5   1   1   3  
+ 5   5   5   1   1  
+
+----------
+Finished in 4s 679msec
+
+por lo que supones que es el 'solver' el que no puede llegar a una solucion.
