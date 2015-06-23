@@ -116,12 +116,15 @@ tiempo > 40min
 Problema 5
 Se propone el problema de recubrimiento (tiling) de pentominos en distintos tableros.
 
-Se propuso la representacion de cada pieza del pentomino y todas sus posibles posiciones variaciones dentro de una matriz como representacion de este problema.
+Se propuso la representacion de cada pieza del pentomino y todas sus posibles
+posiciones variaciones dentro de una matriz como representacion de este
+ problema.
 
 Por desgracia nuestro modelaje no llego a ningun resultado concreto despues de
 2 horas de corrida en cada caso, excepto el primero 2x30 donde las dimensiones
 no son las adecuadas para todas las piezas y el programa termina dando un error
-por pantalla, pero se logro verificar que con pocas piezas si se realizaba un recubrimiento completo de la matriz como por ejemplo:
+por pantalla, pero se logro verificar que con pocas piezas si se realizaba un
+ recubrimiento completo de la matriz como por ejemplo:
 
 Utilizando las letras:
 L = 3
