@@ -59,7 +59,12 @@ ABCDE - FGHIJ = 247
 Finished in 175msec
 (El archivo 3.mzn simplemente se corre).
 
-Se presenta un algoritmo para la resolucion del problema "Elevator Puzzle", despues de recibir el numero de paradas por ascensor, el numero de pisos en el edificio y el numero de elevadores para la prueba, se crearon los conjuntos necesarios para la misma. Se realiza una busqueda para verificar que para cada piso exista un elevador desde cada piso.
+Problema 4
+Se presenta un algoritmo para la resolucion del problema "Elevator Puzzle",
+despues de recibir el numero de paradas por ascensor, el numero de pisos en el
+edificio y el numero de elevadores para la prueba, se crearon los conjuntos 
+necesarios para la misma. Se realiza una busqueda para verificar que para cada
+piso exista un elevador desde cada piso.
 
 n : Numero de pisos del edificio.
 k : Numero de pisos que el elevador puede cubrir (obviando el piso 1 y el N).
