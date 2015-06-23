@@ -59,59 +59,55 @@ ABCDE - FGHIJ = 247
 Finished in 175msec
 (El archivo 3.mzn simplemente se corre).
 
-Se presenta un algoritmo para la resolucion del problema "Elevator Puzzle", despues de recibir el numero de paradas por ascensor y el numero de pisos en el edificio, se crearon los conjuntos necesarios para la prueba. Se consiguio que en vez de ir probando la existencia de una posible combinacion de elevadores desde 1 hasta N elevadores, probar N elevadores desde el principio daba un resultado mas rapido, esto se debe a que no tiene que hacer backtracking con una cantidad de elevadores que nunca van a dar resultado, ademas de esto por la misma forma de resolucion del problema, se usa el minimo numero de elevadores y los inecesarios solo quedan para el piso N y para el 1, ya que los demas pisos estan cubiertos.
+Se presenta un algoritmo para la resolucion del problema "Elevator Puzzle", despues de recibir el numero de paradas por ascensor, el numero de pisos en el edificio y el numero de elevadores para la prueba, se crearon los conjuntos necesarios para la misma. Se realiza una busqueda para verificar que para cada piso exista un elevador desde cada piso.
 
 n : Numero de pisos del edificio.
 k : Numero de pisos que el elevador puede cubrir (obviando el piso 1 y el N).
+m : numero elevadores.
 
-
-k=3; n=6; 
-
-M: 3
-1 6 4 3 2
-1 6 3 4 5
-1 6 5 2 1
-1 6 1 1 1
-1 6 1 1 1
-
-----------
-Finished in 167msec
-
-
-k=4; n=6; 
-M: 1
-1 6 5 3 4 2
-1 6 1 1 1 1  
-1 6 1 1 1 1
-1 6 1 1 1 1
-1 6 1 1 1 1
-1 6 1 1 1 1
+Finished in 138msec
+Compiling 41.mzn, additional arguments k=3; n=6; m=3; 
+Running 41.mzn
+M= 3
+4 2 3 
+5 3 4 
+5 2 2 
 
 ----------
-Finished in 156msec
-
-k=3; n=8;
-tiempo > 40m
-
-
-k=4; n=8; 
-M: 3
-1 8 2 3 7 4
-1 8 2 6 3 5
-1 8 7 4 5 6
-1 8 1 1 1 1
-1 8 1 1 1 1
-1 8 1 1 1 1
+==========
+Finished in 105msec
+Compiling 41.mzn, additional arguments k=4; n=6; m=1; 
+Running 41.mzn
+M= 1
+5 4 3 2 
 
 ----------
+==========
+Finished in 149msec
+Compiling 41.mzn, additional arguments k=4; n=8; m=3; 
+Running 41.mzn
+M= 3
+4 7 5 2 
+7 4 6 3 
+6 5 3 2 
 
-Finished in 7m 56s
+----------
+==========
+Finished in 5s 869msec
+Compiling 41.mzn, additional arguments k=5; n=8; m=3; 
+Running 41.mzn
+M= 3
+5 6 3 7 4 
+4 3 2 6 5 
+7 2 2 2 2 
+
+----------
+==========
+Finished in 26s 431msec
 
 
-
-
-k=5; n=8
-tiempo > 40min
+k=3 n=8
+mas de 40min de corrida.
 
 Problema 5
 Se propone el problema de recubrimiento (tiling) de pentominos en distintos tableros.
