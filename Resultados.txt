@@ -145,4 +145,5 @@ Running 5.mzn
 ----------
 Finished in 4s 679msec
 
-por lo que supones que es el 'solver' el que no puede llegar a una solucion.
+por lo que suponemos que es el 'solver' el que no puede llegar a una
+solucion.
